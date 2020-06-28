@@ -1,6 +1,10 @@
-# AngularMaterial
+# Angular Material
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.9.
+
+A simple web app using Angular Material and JSON Placeholder API.
+
+![Angular Material](/src/assets/images/angular-material.png)
 
 ## Development server
 

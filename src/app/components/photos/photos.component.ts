@@ -1,0 +1,35 @@
+import { Component, OnInit } from '@angular/core';
+
+// import services
+import { PhotosService } from "../../services/photos.service";
+
+// import interfaces
+import { Photo } from 'src/app/models/Photo';
+
+@Component({
+  selector: 'app-photos',
+  templateUrl: './photos.component.html',
+  styleUrls: ['./photos.component.css']
+})
+export class PhotosComponent implements OnInit {
+
+  photos: Photo[] = []
+
+  constructor(private photosService: PhotosService) { }
+
+  ngOnInit() {
+    this.photosService.getPhotos()
+    .subscribe(
+      photos => {
+        console.log(photos);
+        this.photos = photos;
+      },
+      err => console.log(err)
+    )
+  }
+
+  click() {
+    console.log('clicked!');
+  }
+
+}

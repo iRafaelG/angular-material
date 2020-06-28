@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+// import services
+import { PhotosService } from "./services/photos.service";
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +10,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-material';
+
+  albumsId = [1, 2, 3];
+
+  constructor(private photosService: PhotosService) {}
+
 }
